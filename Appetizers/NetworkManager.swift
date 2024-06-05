@@ -31,8 +31,8 @@ final class NetworkManager {
         //data task to download the information or network call with url request
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
             
-            // when wifi not working one example
-            guard let _ = error else {
+            // when wifi not working one example // if error has value means error exists with guard let vice-versa will happen that is if errpr has value then it will pass and if no value means no error then it will throw error
+            if let _ = error {
                 completed(.failure(.unableToComplete))
                 return
             }

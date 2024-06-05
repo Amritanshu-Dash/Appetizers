@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+    
+    @StateObject var viewModel = AppetizerListViewModel()
+    
+    
     var body: some View {
         NavigationStack{
-            List(mockData.appetizers){
+            List(viewModel.appetizers){
                 appetizer in HStack{
                     
                     Image("")
@@ -34,7 +38,13 @@ struct AppetizerListView: View {
                 .padding()
             }
         }
+        .onAppear{
+            viewModel.getAppetizers()
+            // so when navigation stack appears we will make the network call and get appetizers data
+        }
     }
+    
+    
 }
 
 #Preview {
