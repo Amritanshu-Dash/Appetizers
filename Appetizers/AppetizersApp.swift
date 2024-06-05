@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-@main
+@main // entry point to the program..............
+// app confirms to main through it class extension
 struct AppetizersApp: App {
+    
+    // return scene
     var body: some Scene {
+        
+        // every time we launch the appetizers app the new window it be organised with whats in the windowgroup......
         WindowGroup {
-            ContentView()
+            AppetizerTabView()
         }
     }
 }
