@@ -18,6 +18,9 @@
 		853389D92C1041CD00EDE68F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389D82C1041CD00EDE68F /* NetworkManager.swift */; };
 		853389DB2C1045C700EDE68F /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389DA2C1045C700EDE68F /* APError.swift */; };
 		853389DD2C106C5B00EDE68F /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389DC2C106C5B00EDE68F /* AppetizerListViewModel.swift */; };
+		853389DF2C1454C300EDE68F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389DE2C1454C300EDE68F /* Alert.swift */; };
+		853389E12C146CEE00EDE68F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389E02C146CEE00EDE68F /* LoadingView.swift */; };
+		853389E32C1470CA00EDE68F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389E22C1470CA00EDE68F /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		853389D82C1041CD00EDE68F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		853389DA2C1045C700EDE68F /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		853389DC2C106C5B00EDE68F /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
+		853389DE2C1454C300EDE68F /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		853389E02C146CEE00EDE68F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		853389E22C1470CA00EDE68F /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,10 @@
 				853389C42C0DD35F00EDE68F /* AppetizerTabView.swift */,
 				853389D02C0DD7C100EDE68F /* AppetizerListView.swift */,
 				853389DC2C106C5B00EDE68F /* AppetizerListViewModel.swift */,
+				853389DE2C1454C300EDE68F /* Alert.swift */,
 				853389D82C1041CD00EDE68F /* NetworkManager.swift */,
+				853389E02C146CEE00EDE68F /* LoadingView.swift */,
+				853389E22C1470CA00EDE68F /* Color+Ext.swift */,
 				853389DA2C1045C700EDE68F /* APError.swift */,
 				853389D22C0DD7CE00EDE68F /* AccountView.swift */,
 				853389D42C0DD7DE00EDE68F /* OrderView.swift */,
@@ -161,11 +170,14 @@
 				853389D72C0E23C300EDE68F /* Appetizer.swift in Sources */,
 				853389D32C0DD7CE00EDE68F /* AccountView.swift in Sources */,
 				853389C52C0DD35F00EDE68F /* AppetizerTabView.swift in Sources */,
+				853389E12C146CEE00EDE68F /* LoadingView.swift in Sources */,
 				853389DB2C1045C700EDE68F /* APError.swift in Sources */,
+				853389E32C1470CA00EDE68F /* Color+Ext.swift in Sources */,
 				853389DD2C106C5B00EDE68F /* AppetizerListViewModel.swift in Sources */,
 				853389D92C1041CD00EDE68F /* NetworkManager.swift in Sources */,
 				853389C32C0DD35F00EDE68F /* AppetizersApp.swift in Sources */,
 				853389D12C0DD7C100EDE68F /* AppetizerListView.swift in Sources */,
+				853389DF2C1454C300EDE68F /* Alert.swift in Sources */,
 				853389D52C0DD7DE00EDE68F /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
