@@ -22,6 +22,7 @@
 		853389E12C146CEE00EDE68F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389E02C146CEE00EDE68F /* LoadingView.swift */; };
 		853389E32C1470CA00EDE68F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389E22C1470CA00EDE68F /* Color+Ext.swift */; };
 		853389E52C15B20E00EDE68F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389E42C15B20E00EDE68F /* RemoteImage.swift */; };
+		854A04EC2C16BEF400F801A6 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A04EB2C16BEF400F801A6 /* AppetizerDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		853389E02C146CEE00EDE68F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		853389E22C1470CA00EDE68F /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		853389E42C15B20E00EDE68F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		854A04EB2C16BEF400F801A6 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				853389DC2C106C5B00EDE68F /* AppetizerListViewModel.swift */,
 				853389D02C0DD7C100EDE68F /* AppetizerListView.swift */,
+				854A04EB2C16BEF400F801A6 /* AppetizerDetailView.swift */,
 			);
 			path = AppetizerListView;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				853389E32C1470CA00EDE68F /* Color+Ext.swift in Sources */,
 				853389E52C15B20E00EDE68F /* RemoteImage.swift in Sources */,
 				853389DD2C106C5B00EDE68F /* AppetizerListViewModel.swift in Sources */,
+				854A04EC2C16BEF400F801A6 /* AppetizerDetailView.swift in Sources */,
 				853389D92C1041CD00EDE68F /* NetworkManager.swift in Sources */,
 				853389C32C0DD35F00EDE68F /* AppetizersApp.swift in Sources */,
 				853389D12C0DD7C100EDE68F /* AppetizerListView.swift in Sources */,
