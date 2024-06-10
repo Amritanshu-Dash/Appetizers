@@ -11,14 +11,18 @@ struct AppetizerDetailView: View {
     
     let appetizer: Appetizer
     @Binding var isShowingDetailView: Bool
+    
     var body: some View {
        
         VStack {
-            Image("food-placeholder")
-                .resizable()
+            
+            // we wont be downloading images again as we put these in the cache with image url as identifier
+            // first step of download image in network manager file is to store the image in cache memory or pull it from cache if we have it
+            
+            AppetizerRemoteImage(urlString: appetizer.imageURL)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 320, height: 225)
-                .clipShape(Circle())
+                .frame(width: 300, height: 200)
+                .padding(.all)
             
             VStack {
                 Text(appetizer.name)

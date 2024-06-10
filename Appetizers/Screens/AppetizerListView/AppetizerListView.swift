@@ -11,6 +11,7 @@ struct AppetizerListView: View {
     
     @StateObject var viewModel = AppetizerListViewModel()
     @State private var isShowingDetailView = false
+    @State private var selectedAppetizer: Appetizer?
     
     var body: some View {
         ZStack {
@@ -38,19 +39,22 @@ struct AppetizerListView: View {
                         
                     }
                     .onTapGesture {
+                        selectedAppetizer = appetizer
                         isShowingDetailView = true
                     }
                     .padding()
-                    
                 }
+                .disabled(isShowingDetailView)
+                .navigationTitle("Appetizers 🍣 🍤")
             }
+            .blur(radius: isShowingDetailView ? 12 : 0)
             .onAppear{
                 viewModel.getAppetizers()
                 // so when navigation stack appears we will make the network call and get appetizers data
             }
             
             if isShowingDetailView {
-                AppetizerDetailView(appetizer: mockData.sampleAppetizer, isShowingDetailView: $isShowingDetailView)
+                AppetizerDetailView(appetizer: selectedAppetizer!, isShowingDetailView: $isShowingDetailView)
             }
             if viewModel.isLoading{
                 LoadingView()
