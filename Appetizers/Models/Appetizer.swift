@@ -12,7 +12,7 @@ struct Appetizer: Decodable, Identifiable {
     let protein: Int
     let carbs: Int
     let description: String
-    let id = UUID()
+    var id = UUID()
     let imageURL: String
     let name: String
     let calories: Int

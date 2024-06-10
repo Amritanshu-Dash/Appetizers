@@ -16,10 +16,10 @@ struct AppetizerListView: View {
         ZStack {
             NavigationStack{
                 List(viewModel.appetizers){
+                
                     appetizer in HStack{
                         
-                        Image("")
-                            .resizable()
+                        AppetizerRemoteImage(urlString: appetizer.imageURL)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 120, height: 90)
                             .cornerRadius(10)
@@ -32,6 +32,7 @@ struct AppetizerListView: View {
                             Text("$ \(appetizer.price, specifier: "%.2f")")
                                 .foregroundStyle(.secondary)
                                 .fontWeight(.heavy)
+                            
                             
                         }.padding(.leading)
                         
