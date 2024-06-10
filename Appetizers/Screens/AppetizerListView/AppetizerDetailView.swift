@@ -10,6 +10,7 @@ import SwiftUI
 struct AppetizerDetailView: View {
     
     let appetizer: Appetizer
+    @Binding var isShowingDetailView: Bool
     var body: some View {
        
         VStack {
@@ -94,11 +95,27 @@ struct AppetizerDetailView: View {
         .background(Color(.black))
         .cornerRadius(42)
         .shadow(color: .BrandPrimary, radius: 102)
+        
+        .overlay(Button {
+            isShowingDetailView = false
+        } label: {
+            ZStack {
+                Circle()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.white)
+                    .opacity(0.74)
+                
+                Image(systemName: "xmark")
+                    .imageScale(.large)
+                    .frame(width: 54, height: 54)
+                    .foregroundColor(.black)
+            }
+        }, alignment: .topTrailing)
     }
 }
 
 struct AppetizerDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AppetizerDetailView(appetizer: mockData.sampleAppetizer)
+        AppetizerDetailView(appetizer: mockData.sampleAppetizer, isShowingDetailView: .constant(true))
     }
 }

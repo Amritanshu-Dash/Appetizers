@@ -10,7 +10,7 @@ import SwiftUI
 struct AppetizerListView: View {
     
     @StateObject var viewModel = AppetizerListViewModel()
-    
+    @State private var isShowingDetailView = false
     
     var body: some View {
         ZStack {
@@ -37,7 +37,11 @@ struct AppetizerListView: View {
                         }.padding(.leading)
                         
                     }
+                    .onTapGesture {
+                        isShowingDetailView = true
+                    }
                     .padding()
+                    
                 }
             }
             .onAppear{
@@ -45,6 +49,9 @@ struct AppetizerListView: View {
                 // so when navigation stack appears we will make the network call and get appetizers data
             }
             
+            if isShowingDetailView {
+                AppetizerDetailView(appetizer: mockData.sampleAppetizer, isShowingDetailView: $isShowingDetailView)
+            }
             if viewModel.isLoading{
                 LoadingView()
             }
