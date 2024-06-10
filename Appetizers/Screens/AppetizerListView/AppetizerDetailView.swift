@@ -27,16 +27,16 @@ struct AppetizerDetailView: View {
             VStack {
                 
                 Text(appetizer.name)
-                    .font(.title)
+                    .font(.headline)
                     .fontWeight(.heavy)
                     .foregroundStyle(.cyan)
                 
                 Text(appetizer.description)
-                    .font(.body)
-                    .fontWeight(.bold)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.cyan)
-                    .padding()
+                    .padding(.bottom, 7)
                 
                 HStack(spacing: 40) {
                     
