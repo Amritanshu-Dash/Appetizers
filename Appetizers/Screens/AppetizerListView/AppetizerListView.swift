@@ -10,22 +10,24 @@ import SwiftUI
 struct AppetizerListView: View {
     
     @StateObject var viewModel = AppetizerListViewModel()
-    @State private var isShowingDetailView = false
-    @State private var selectedAppetizer: Appetizer?
-    
+   
     var body: some View {
+        
         ZStack {
-            NavigationStack{
-                List(viewModel.appetizers){
+            
+            NavigationStack {
                 
-                    appetizer in HStack{
+                List(viewModel.appetizers) {
+                
+                    appetizer in HStack {
                         
                         AppetizerRemoteImage(urlString: appetizer.imageURL)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 120, height: 90)
                             .cornerRadius(10)
                         
-                        VStack(alignment: .leading, spacing: 5){
+                        VStack(alignment: .leading, spacing: 5) {
+                            
                             Text(appetizer.name)
                                 .font(.title2)
                                 .fontWeight(.heavy)
@@ -34,39 +36,39 @@ struct AppetizerListView: View {
                                 .foregroundStyle(.secondary)
                                 .fontWeight(.heavy)
                             
-                            
-                        }.padding(.leading)
+                        }
+                        .padding(.leading)
                         
                     }
                     .onTapGesture {
-                        selectedAppetizer = appetizer
-                        isShowingDetailView = true
+                        viewModel.selectedAppetizer = appetizer
+                        viewModel.isShowingDetailView = true
                     }
                     .padding()
+                    
                 }
-                .disabled(isShowingDetailView)
+                .disabled(viewModel.isShowingDetailView)
                 .navigationTitle("Appetizers 🍣 🍤")
+                
             }
-            .blur(radius: isShowingDetailView ? 12 : 0)
+            .blur(radius: viewModel.isShowingDetailView ? 12 : 0)
             .onAppear{
-                viewModel.getAppetizers()
-                // so when navigation stack appears we will make the network call and get appetizers data
+                viewModel.getAppetizers() // so when navigation stack appears we will make the network call and get appetizers data
             }
             
-            if isShowingDetailView {
-                AppetizerDetailView(appetizer: selectedAppetizer!, isShowingDetailView: $isShowingDetailView)
+            if (viewModel.isShowingDetailView) {
+                AppetizerDetailView(appetizer: viewModel.selectedAppetizer!, isShowingDetailView: $viewModel.isShowingDetailView)
             }
-            if viewModel.isLoading{
+            
+            if (viewModel.isLoading) {
                 LoadingView()
             }
+            
         }
-        .alert(item: $viewModel.alertItem, content: {
-            alertItem in
-            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissedButton)
-    })
+        .alert( item: $viewModel.alertItem, content: { alertItem in Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissedButton)} )
+        
     }
-    
-    
+
 }
 
 #Preview {

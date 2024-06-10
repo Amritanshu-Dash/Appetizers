@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct AppetizerTabView: View {
+    
     var body: some View {
+        
         TabView {
             
             AppetizerListView().tabItem {
@@ -25,9 +27,12 @@ struct AppetizerTabView: View {
                 Image(systemName: "bag.circle.fill")
                 Text("Order")
             }
+            
         }
         .accentColor(.BrandPrimary)
+        
     }
+    
 }
 
 #Preview {

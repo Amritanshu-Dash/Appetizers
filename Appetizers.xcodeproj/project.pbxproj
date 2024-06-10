@@ -23,6 +23,9 @@
 		853389E32C1470CA00EDE68F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389E22C1470CA00EDE68F /* Color+Ext.swift */; };
 		853389E52C15B20E00EDE68F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853389E42C15B20E00EDE68F /* RemoteImage.swift */; };
 		854A04EC2C16BEF400F801A6 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A04EB2C16BEF400F801A6 /* AppetizerDetailView.swift */; };
+		854A04F22C16EED600F801A6 /* buttonCoreDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A04F12C16EED600F801A6 /* buttonCoreDesign.swift */; };
+		854A04F42C16EFA700F801A6 /* xDismissedButtonCoreDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A04F32C16EFA700F801A6 /* xDismissedButtonCoreDesign.swift */; };
+		854A04F62C16F2DD00F801A6 /* nutritionInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A04F52C16F2DD00F801A6 /* nutritionInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		853389E22C1470CA00EDE68F /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		853389E42C15B20E00EDE68F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		854A04EB2C16BEF400F801A6 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
+		854A04F12C16EED600F801A6 /* buttonCoreDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonCoreDesign.swift; sourceTree = "<group>"; };
+		854A04F32C16EFA700F801A6 /* xDismissedButtonCoreDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDismissedButtonCoreDesign.swift; sourceTree = "<group>"; };
+		854A04F52C16F2DD00F801A6 /* nutritionInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nutritionInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 		853389C12C0DD35F00EDE68F /* Appetizers */ = {
 			isa = PBXGroup;
 			children = (
+				854A04ED2C16ECA400F801A6 /* Views */,
 				853389EF2C16B6E400EDE68F /* UIKit Components */,
 				853389EE2C16B68F00EDE68F /* Models */,
 				853389EA2C16B60500EDE68F /* Utilities */,
@@ -191,6 +198,24 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		854A04ED2C16ECA400F801A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				854A04EE2C16ECAA00F801A6 /* Buttons */,
+				854A04F52C16F2DD00F801A6 /* nutritionInformation.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		854A04EE2C16ECAA00F801A6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				854A04F12C16EED600F801A6 /* buttonCoreDesign.swift */,
+				854A04F32C16EFA700F801A6 /* xDismissedButtonCoreDesign.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +291,7 @@
 				853389C52C0DD35F00EDE68F /* AppetizerTabView.swift in Sources */,
 				853389E12C146CEE00EDE68F /* LoadingView.swift in Sources */,
 				853389DB2C1045C700EDE68F /* APError.swift in Sources */,
+				854A04F22C16EED600F801A6 /* buttonCoreDesign.swift in Sources */,
 				853389E32C1470CA00EDE68F /* Color+Ext.swift in Sources */,
 				853389E52C15B20E00EDE68F /* RemoteImage.swift in Sources */,
 				853389DD2C106C5B00EDE68F /* AppetizerListViewModel.swift in Sources */,
@@ -274,6 +300,8 @@
 				853389C32C0DD35F00EDE68F /* AppetizersApp.swift in Sources */,
 				853389D12C0DD7C100EDE68F /* AppetizerListView.swift in Sources */,
 				853389DF2C1454C300EDE68F /* Alert.swift in Sources */,
+				854A04F42C16EFA700F801A6 /* xDismissedButtonCoreDesign.swift in Sources */,
+				854A04F62C16F2DD00F801A6 /* nutritionInformation.swift in Sources */,
 				853389D52C0DD7DE00EDE68F /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,5 +18,7 @@ struct AppetizersApp: App {
         WindowGroup {
             AppetizerTabView()
         }
+        
     }
+    
 }

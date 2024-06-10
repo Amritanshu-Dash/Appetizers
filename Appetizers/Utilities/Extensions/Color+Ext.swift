@@ -15,5 +15,4 @@ extension Color {
 // uikit color component
 extension UIColor {
     static let BrandPrimary = UIColor(named: "brandPrimary")
-    
 }

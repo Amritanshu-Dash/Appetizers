@@ -22,17 +22,17 @@ final class NetworkManager {
     
     private init(){}
     
-    
     // result has both success case -> appetizers and failure case -> APError
-    func getAppetizers(completed: @escaping (Result<[Appetizer], APError>) -> Void){
+    func getAppetizers(completed: @escaping (Result<[Appetizer], APError>) -> Void) {
+        
         //checks if the url is okay or not
-        guard let url = URL(string: appetizerURL) else{
+        guard let url = URL(string: appetizerURL) else {
             completed(.failure(.invalidURL))
             return
         }
         
         //data task to download the information or network call with url request
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
             
             // when wifi not working one example // if error has value means error exists with guard let vice-versa will happen that is if errpr has value then it will pass and if no value means no error then it will throw error
             if let _ = error {
@@ -56,11 +56,14 @@ final class NetworkManager {
                 let decoder = JSONDecoder()
                 let decodedResponse = try decoder.decode(AppetizerResponse.self, from: data)
                 completed(.success(decodedResponse.request))
-            }catch{
+            }
+            catch {
                 completed(.failure(.invalidData))
             }
+            
         }
         task.resume()
+        
     }
     
     func downloadImage(fromURLString URLString : String, completed: @escaping(UIImage?)->Void) {
@@ -87,9 +90,11 @@ final class NetworkManager {
             
             self.cache.setObject(image, forKey: cacheKey) // sets item in cache
             completed(image)
+            
         }
         
         task.resume()
+        
     }
     
 }
