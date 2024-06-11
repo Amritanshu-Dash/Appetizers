@@ -14,7 +14,7 @@ struct AppetizerListView: View {
     var body: some View {
         
         ZStack {
-            
+
             NavigationStack {
                 
                 List(viewModel.appetizers) {
@@ -40,6 +40,7 @@ struct AppetizerListView: View {
                         .padding(.leading)
                         
                     }
+                    .listRowSeparatorTint(.BrandPrimary)
                     .onTapGesture {
                         viewModel.selectedAppetizer = appetizer
                         viewModel.isShowingDetailView = true

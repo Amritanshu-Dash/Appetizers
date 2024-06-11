@@ -10,6 +10,11 @@ import SwiftUI
 struct AccountView: View {
     
     @StateObject var viewModel = AccountViewModel()
+    @FocusState private var focusedTextField: FormTextField?
+    
+    enum FormTextField {
+        case firstName, lastName, email
+    }
     
     var body: some View {
         
@@ -17,15 +22,31 @@ struct AccountView: View {
             Form {
                 Section(header: Text("Personal Info")) {
                     
+                    // focus helps go to the next input field submit label changes the return keyword to what is written ..
                     TextField("First Name", text: $viewModel.user.firstName)
+                        .focused($focusedTextField, equals: .firstName)
+                        .onSubmit {
+                            focusedTextField = .lastName
+                        }
+                        .submitLabel(.next)
                         .autocorrectionDisabled(true)
                         .keyboardType(.alphabet)
                     
                     TextField("Last Name", text: $viewModel.user.lastName)
+                        .focused($focusedTextField, equals: .lastName)
+                        .onSubmit {
+                            focusedTextField = .email
+                        }
+                        .submitLabel(.next)
                         .autocorrectionDisabled(true)
                         .keyboardType(.alphabet)
                     
                     TextField("Email", text: $viewModel.user.email)
+                        .focused($focusedTextField, equals: .email)
+                        .onSubmit {
+                            focusedTextField = nil
+                        }
+                        .submitLabel(.continue)
                         .autocorrectionDisabled(true)
                         .keyboardType(.emailAddress)
                     
@@ -51,6 +72,11 @@ struct AccountView: View {
                 }
                 .toggleStyle(SwitchToggleStyle(tint: .BrandPrimary))
                 
+            }
+            .toolbar{
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Dismiss", action: {focusedTextField = nil})
+                }
             }
             
             .navigationTitle("Account")

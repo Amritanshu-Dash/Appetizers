@@ -28,7 +28,7 @@ struct LoadingView: View {
         
         ZStack{
             Color(.black)
-                .ignoresSafeArea(edges: .all)
+                .ignoresSafeArea()
             ActivityIndicator()
         }
         
