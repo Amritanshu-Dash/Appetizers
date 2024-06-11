@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OrderView: View {
     
-    @State private var orderItems = mockData.sampleAppetizers
+    @EnvironmentObject var order: Order
     
     var body: some View {
         
@@ -17,24 +17,26 @@ struct OrderView: View {
             ZStack {
                 VStack {
                     List {
-                        ForEach(orderItems){
+                        ForEach(order.items){
                             appetizer in AppetizerListCell(appetizer: appetizer)
                         }
                         .onDelete(perform: { indexSet in
-                            orderItems.remove(atOffsets: indexSet) // basically when we swip to delete an item it will recognise the index of the item we are going to delete and the orderItem.remove() will be called at that index 
+                            order.deleteItems(at: indexSet) // .onDelete(perform: order.deleteItems) this can also work ...... 
                         })
+                        
+                       
                     }
                     .listStyle(InsetGroupedListStyle())
                     
                     Button{
                         print("YEs")
                     }label: {
-                        buttonCoreDesign(title: "$566727 - Place Order")
+                        buttonCoreDesign(title: "\(order.totalPrice, specifier: "%.2f") - Place Order")
                     }
                     .padding()
                 }
                 
-                if (orderItems.isEmpty) {
+                if (order.items.isEmpty) {
                     EmptyState()
                 }
             }

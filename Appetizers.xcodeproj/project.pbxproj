@@ -31,6 +31,7 @@
 		857836B12C1813F900A2B91C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857836B02C1813F900A2B91C /* User.swift */; };
 		857836B52C18370700A2B91C /* AppetizerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857836B42C18370700A2B91C /* AppetizerListCell.swift */; };
 		857836B82C18402300A2B91C /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857836B72C18402300A2B91C /* EmptyState.swift */; };
+		857836BA2C18443500A2B91C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857836B92C18443500A2B91C /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		857836B02C1813F900A2B91C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		857836B42C18370700A2B91C /* AppetizerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListCell.swift; sourceTree = "<group>"; };
 		857836B72C18402300A2B91C /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		857836B92C18443500A2B91C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			children = (
 				853389D62C0E23C300EDE68F /* Appetizer.swift */,
 				857836B02C1813F900A2B91C /* User.swift */,
+				857836B92C18443500A2B91C /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				853389DF2C1454C300EDE68F /* Alert.swift in Sources */,
 				854A04F42C16EFA700F801A6 /* xDismissedButtonCoreDesign.swift in Sources */,
 				854A04F62C16F2DD00F801A6 /* nutritionInformation.swift in Sources */,
+				857836BA2C18443500A2B91C /* Order.swift in Sources */,
 				853389D52C0DD7DE00EDE68F /* OrderView.swift in Sources */,
 				857836B82C18402300A2B91C /* EmptyState.swift in Sources */,
 			);

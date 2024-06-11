@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AppetizerDetailView: View {
     
+    @EnvironmentObject var order: Order // it assumes that this is present in the environment and it will try to get it if not app will crash ..... 
+    
     let appetizer: Appetizer
     @Binding var isShowingDetailView: Bool
     
@@ -50,7 +52,9 @@ struct AppetizerDetailView: View {
             
             Spacer()
             
-            Button {print("Tapped")} label: {buttonCoreDesign(title: "\(appetizer.price, specifier: "%.2f") - Add to Order")}
+            Button {
+                order.add(appetizer)
+            } label: {buttonCoreDesign(title: "\(appetizer.price, specifier: "%.2f") - Add to Order")}
             .padding(.bottom, 35)
             
         }
