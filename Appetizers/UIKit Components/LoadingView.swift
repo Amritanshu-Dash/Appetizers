@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct ActivityIndicator: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> UIActivityIndicatorView {
-        
-        let activityIndicatorView = UIActivityIndicatorView(style: .large)
-        activityIndicatorView.color = UIColor.BrandPrimary
-        activityIndicatorView.startAnimating()
-        return activityIndicatorView
-        
-    }
-    
-    func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) { }
-    
-}
+//struct ActivityIndicator: UIViewRepresentable {
+//    
+//    func makeUIView(context: Context) -> UIActivityIndicatorView {
+//        
+//        let activityIndicatorView = UIActivityIndicatorView(style: .large)
+//        activityIndicatorView.color = UIColor.BrandPrimary
+//        activityIndicatorView.startAnimating()
+//        return activityIndicatorView
+//        
+//    }
+//    
+//    func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) { }
+//    
+//}
 
 struct LoadingView: View {
     
@@ -29,9 +29,24 @@ struct LoadingView: View {
         ZStack{
             Color(.black)
                 .ignoresSafeArea()
-            ActivityIndicator()
+            
+            VStack{
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .teal))
+                    .scaleEffect(5.1)
+                    .padding(.bottom, 50)
+                Text("LOADING")
+                    .foregroundStyle(.pink)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .fontDesign(.rounded)
+            }
         }
         
     }
     
+}
+
+#Preview {
+    LoadingView()
 }
